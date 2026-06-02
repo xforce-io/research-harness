@@ -1,0 +1,6 @@
+[submodule "trace"]
+	path = trace
+	url = https://github.com/xforce-io/research-harness-trace.git
+[submodule "decision"]
+	path = decision
+	url = https://github.com/xforce-io/research-harness-decision.git

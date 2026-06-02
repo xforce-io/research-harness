@@ -1,0 +1,11 @@
+# researcher workspace manifest — research-harness 超级仓控制面板
+#
+# researcher run 在本仓根识别此文件 → workspace 编排:逐个推进 active:true 的支柱,
+# dormant(active:false)完全不碰。path = submodule 目录名。子仓 URL 见 .gitmodules。
+#
+# 详见 xforce-io/researcher#9 与本仓 CHARTER.md。
+version: 1
+topics:
+  - { path: trace,    active: true }   # 右横切轴,首轮验证用
+  - { path: decision, active: false }  # 暂 dormant(该仓有未收尾的在途 tick;清理后再转 active)
+  # 其余支柱(data/execution/ontology/evolution/security)开始研究时挂载并登记于此
