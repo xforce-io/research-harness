@@ -44,4 +44,9 @@
 - **边界**:管"决定与编排";**不管**知识供给(`data`)、行动力供给(`execution`)、schema(`ontology`)、artifact 进化(`evolution`)。
 - **接口**:消费 `data`+`execution`+`ontology`;受 `trace` 观测;其策略/prompt 作为 artifact 被 `evolution` 进化。
 
-> 其余支柱(data / execution / ontology / evolution / security)的 excerpt 在各自支柱启动研究时补入。
+### `data` —— 纵向·供给
+- **Mandate**:数据资源管理。维护一套对数据资源的**类型化元数据 catalog + 连接/访问**,覆盖结构化、非结构化、向量与视图数据,让 agent 在长任务中可靠地**发现、选择、访问**正确的数据。供给"知识"(与 `execution` 供给"行动力"对偶)。
+- **边界**:管"知识供给"(catalog/元数据 + 连接 + 视图 + 新鲜度);**不管**决策编排(`decision`)、行动力供给(`execution`)、统一 schema 本身(`ontology`)、artifact 进化(`evolution`)。元数据是本支柱自有 catalog 面,不是独立支柱。
+- **接口**:catalog 元数据**遵循 `ontology` 的 schema**;向 `decision` 供给经类型化的数据上下文;受 `trace` 观测;受 `security` 治理(访问控制)。
+
+> 其余支柱(execution / ontology / evolution / security)的 excerpt 在各自支柱启动研究时补入。

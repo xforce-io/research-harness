@@ -4,3 +4,6 @@
 [submodule "decision"]
 	path = decision
 	url = https://github.com/xforce-io/research-harness-decision.git
+[submodule "data"]
+	path = data
+	url = https://github.com/xforce-io/research-harness-data.git
