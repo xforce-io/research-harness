@@ -122,6 +122,20 @@
 - submodule 指针同步的心智负担(子 PR 合并后 `git submodule update --remote`)。
 
 ## 6. 关联
-- 结构侧 issue:agent-harness-research#11
+- 结构侧 issue:agent-harness-research#11(已重定向为 research-harness-trace#11)
 - 工具侧 issue:researcher#9
-- 本 goal.md 将来迁入 `research-harness` 超级仓根(或 `docs/`)作为活文档。
+- 本 goal.md 已迁入 `research-harness` 超级仓根作为活文档。
+
+## 7. 执行结果(2026-06-02)
+
+- **阶段 0 ✅** 改名 `agent-harness-research`→`research-harness-trace`、`research-decision-agent`→`research-harness-decision`;新建 `research-harness` 超级仓;remote URL 更新。
+- **阶段 1 ✅** 超级仓骨架:`CHARTER.md` / `README.md` / `docs/integration-map.md` / `researcher.workspace.yml` / 挂 `trace`+`decision` submodule。递归克隆验收通过。
+- **阶段 2 ✅(代码完成,待人评审合并)** `researcher` 仓 PR #10 `feat/9-workspace-run`:manifest + 探测 + 串行编排(错误隔离+charter sync+汇总)+ charter 切片/注入 + 漂移分类。`build`/`lint`/`test`(170)全绿。设计 `docs/design/9-workspace-run.md`。
+- **阶段 3 ✅** 超级仓根 `researcher run` 实跑一轮:workspace 模式识别 ✓、charter 同步进 trace ✓、dormant `decision` 零改动 ✓、trace 深读 `arxiv:2509.02360` 产出 note #16 并开 PR(research-harness-trace#12)✓、**charter tension 真实 surface** ✓(SWE-PRM 的 in-flight 纠偏落在 `trace`→`evolution` 接口未覆盖的中间态)。5 条验收全部满足。
+
+### 待人决策(非代码,human-gated)
+1. **合并 researcher#10**(workspace 能力)— 评审后合并。
+2. **合并 research-harness-trace#12**(note #16)— 评审后合并;合并后 `git submodule update --remote` bump 超级仓 trace 指针。
+3. **裁决首个 charter tension**:是否把 in-flight course-correction 显式写入 `CHARTER.md`(扩 `trace` 边界 / 视为 `evolution` 瞬时特例 / 判定超范围)。这是"研究反哺总纲"的双向机制首次触发。
+4. 给现有 `trace`/`decision` 仓的 `.researcher/.gitignore` 补 `charter.md`(模板已加,惠及未来新支柱)。
+5. `decision` 仓那次未收尾的在途 tick(`researcher/19_*`)清理后再在 workspace.yml 转 `active`。
