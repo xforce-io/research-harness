@@ -12,9 +12,7 @@
 | 2 | 决策智能体 | `decision` | `research-harness-decision` | 纵向 |
 | 3 | experience 闭环（捕获→更新→评价） | `experience` | `research-harness-experience` | 横切（右） |
 
-> `experience` 由 `research-harness-trace` **就地升级**（同一 GitHub 仓库对象，star 保留）。旧 URL 仍跳转到该仓。
->
-> 懒创建：`execution` · `ontology` · `security`。不单独立 `evolution` 仓（更新步已收进 experience）。
+> 懒创建：`execution` · `ontology` · `security`。更新步在 `experience` 闭环内，不另立 `evolution` 支柱。
 
 ## 锚定与防漂移
 

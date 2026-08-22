@@ -8,12 +8,12 @@
 |---|---|---|---|
 | 供给 | `data` | 长任务中稳定取到正确上下文 | active |
 | 推理 | `decision` | 多步执行朝目标收敛 | active |
-| 闭环 | `experience` | 交互流成为可学习介质（捕获→更新→评价） | active（由 trace 就地升级） |
+| 闭环 | `experience` | 交互流成为可学习介质（捕获→更新→评价） | active |
 | 供给 | `execution` | 受管行动力（MCP/技能/沙盒） | 懒创建 |
 | schema | `ontology` | 两类 catalog 的 schema | 懒创建 |
 | 横切 | `security` | 权限 / 数据 / 行动治理 | 懒创建 |
 
-`evolution` 不再单独立柱：更新步（改权重或 harness）收进 `experience`。
+更新步（改权重或 harness）在 `experience` 闭环内，不另立 `evolution` 支柱。
 
 ## 2. 支柱间接口
 
