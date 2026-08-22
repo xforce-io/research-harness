@@ -1,12 +1,11 @@
-# researcher workspace manifest — research-harness 超级仓控制面板
-#
-# researcher run 在本仓根识别此文件 → workspace 编排:逐个推进 active:true 的支柱,
-# dormant(active:false)完全不碰。path = submodule 目录名。子仓 URL 见 .gitmodules。
-#
-# 详见 xforce-io/researcher#9 与本仓 CHARTER.md。
 version: 1
 topics:
-  - { path: trace,    active: true }   # 右横切轴
-  - { path: decision, active: true }   # 决策智能体
-  - { path: data,     active: true }   # 数据资源(供给知识)
-  # 其余支柱(execution/ontology/evolution/security)开始研究时挂载并登记于此
+  - path: experience
+    active: true
+    publish: false
+  - path: decision
+    active: true
+    publish: false
+  - path: data
+    active: true
+    publish: false
